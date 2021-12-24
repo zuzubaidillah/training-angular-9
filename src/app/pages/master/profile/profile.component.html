@@ -1,0 +1,50 @@
+<div class="container-fluid">
+	<app-page-title [title]="pageTitle" [breadcrumbItems]="breadCrumbItems"></app-page-title>
+	<div class="row">
+		<div class="col-md-12">
+			<div class="card">
+				<div class="card-body">
+					<form disabled="isView">
+						<fieldset [disabled]="isView">
+							<div class="row">
+								<div class="col-md-12" style="padding-bottom: 10px;">
+                                    <span style="font-style: italic;font-size: 11px; font-weight: bold;"> Tanda <span style="font-size: 13px;color: red">*</span> wajib diisi </span>
+									<br>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group row">
+										<label class="col-md-4 col-form-label col-form-label-sm required">Nama</label>
+										<div class="col-md-8">
+											<input class="form-control form-control-sm" type="text" name="nama" [(ngModel)]="model.nama" placeholder="Nama" />
+										</div>
+									</div>
+									<div class="form-group row">
+										<label class="col-md-4 col-form-label col-form-label-sm required">Password</label>
+										<div class="col-md-8">
+											<input class="form-control form-control-sm" type="password" name="password" [(ngModel)]="model.password" placeholder="password" />
+											<p *ngIf="isEdit" class="col-form-label col-form-label-sm">kosongi apabila tidak ingin dirubah</p>
+										</div>
+									</div>
+									<div class="form-group row">
+										<label class="col-md-4 col-form-label col-form-label-sm required">Username</label>
+										<div class="col-md-8">
+											<input class="form-control form-control-sm" type="text" name="username" [(ngModel)]="model.username" name="username" placeholder="Username" />
+										</div>
+									</div>
+								</div>
+							</div>
+						</fieldset>
+					</form>
+				</div>
+				<div class="card-footer">
+					<div class="float-right">
+						<button class="btn btn-primary btn-sm" (click)="save()">
+							<i class="fa fa-save font-size-14 align-middle mr-2"></i>
+							Simpan
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

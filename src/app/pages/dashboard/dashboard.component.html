@@ -1,0 +1,57 @@
+<div class="container-fluid">
+	<div class="row">
+
+		<div class="col-md-4">
+			<div class="card">
+				<div class="card-body">
+					<h5 class="card-title">Total Penjualan hari ini</h5>
+					<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-md-4">
+			<div class="card">
+				<div class="card-body">
+					<h5 class="card-title">Total Item Terjual</h5>
+					<p class="card-text">Makanan: 25</p>
+					<p class="card-text">Minuman: 25</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-md-4">
+			<div class="card">
+				<div class="card-body">
+					<h5 class="card-title">Best Seller</h5>
+					<p class="card-text">Ayam Geprek ()</p>
+					<p class="card-text">Mie Ayam</p>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<div class="row">
+		<!--menampilkan charts-->
+		<div class="col-md-8" id="htmlData">
+			<table class="table table-bordered">
+				<tr class="table-primary">
+					<th>Id</th>
+					<th>Name</th>
+					<th>Email</th>
+					<th>Phone</th>
+				</tr>
+				<tr *ngFor="let user of USERS">
+					<th>{{user.id}}</th>
+					<td>{{user.name}}</td>
+					<td>{{user.email}}</td>
+					<td>{{user.phone}}</td>
+				</tr>
+			</table>
+		</div>
+
+		<div class="col-md-4 text-right">
+			<button class="btn btn-success btn-block" (click)="openPDF()">Download PDF</button>
+		</div>
+	</div>
